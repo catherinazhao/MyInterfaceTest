@@ -2,6 +2,7 @@
 import os
 import unittest
 import HTMLTestRunner
+import time
 
 from bases.demo import RunRequest
 
@@ -44,19 +45,11 @@ class TestRequest(unittest.TestCase):
 if __name__ == '__main__':
 	# send_post(url, data)
 	# run = TestRequest()
-	data = {
-		'username': 'my_test',
-		'password': '123456'
-	}
-
-	url = 'http://127.0.0.1:8000/login/'
-
-	print(TestRequest(url, "GET", data).res)
 
 	"""全部测试用例从头执行一遍"""
 	# unittest.main()
 
-	"""使用测试套件的方式依次加载测试用例"""
+	"""使用测试套件的方式依次添加测试用例"""
 	suite = unittest.TestSuite()
 	"""一条一条的测试用例添加"""
 	# suite.addTest(TestRequest('test_2'))
@@ -68,7 +61,7 @@ if __name__ == '__main__':
 	"""所述TestLoader类被用来创建类和模块的测试套件。
 	通常不需要创建该类的实例。unittest框架提供了一个可以共享的实例unittest.defaultTestLoader"""
 	loader = unittest.TestLoader()
-	# unittest.defaultTestLoader.discover()
+	case = unittest.defaultTestLoader.discover(start_dir=PWD)
 
 	"""通过遍历路径的方法加载测试case, pattern=test*.py, 必须以test开头, start_dir为顶层目录, 从顶层目录开始依次递归遍历文件"""
 	# https://www.cnblogs.com/imyalost/p/9048386.html
@@ -78,15 +71,16 @@ if __name__ == '__main__':
 
 	"""通过loader_runner的from name方法加载测试case, 注：名称要写全, 文件名.类名.测试方法名"""
 	"""name是一个string，string需要是是这种格式的“module.class.method"""
-	test_case1 = loader.loadTestsFromName('request_test.TestRequest.test_1')
-	test_case2 = loader.loadTestsFromName('request_test.TestRequest.test_2')
+	# test_case1 = loader.loadTestsFromName('request_test.TestRequest.test_1')
+	#test_case2 = loader.loadTestsFromName('request_test.TestRequest.test_2')
 
 	"""通过loader_runner的Module模块进行test case所在的module"""
 	# test_case1 = loader.loadTestsFromModule('request_test')
 
 	"""testCaseClass必须是TestCase的子类（或孙类也行）"""
 	# test_case2 = loader.loadTestsFromTestCase('test_1')
-	suite.addTests([test_case1, test_case2])
+	# suite.addTests([test_case1, test_case2])
+	suite.addTest(case)
 
 	"""运行测试用例"""
 	# runner = unittest.TextTestRunner(verbosity=2)
@@ -98,7 +92,9 @@ if __name__ == '__main__':
 	# runner.run(suite)
 
 	report_dir = os.path.join(PWD, 'report')
-	report_result = os.path.join(report_dir, 'my_test_report1.html')
+	report_name = "TestReport_" + str(time.strftime("%Y-%m-%d_%H-%M-%S", time.localtime())) + '.html'
+	print(report_name)
+	report_result = os.path.join(report_dir, report_name)
 	fp = open(report_result, 'wb+')
 
 	"""使用HTMLTestRunner生成测试报告"""

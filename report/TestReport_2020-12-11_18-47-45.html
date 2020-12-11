@@ -189,9 +189,9 @@ function showOutput(id, name) {
 
 <div class='heading'>
 <h1>我的测试报告</h1>
-<p class='attribute'><strong>Start Time:</strong> 2020-12-10 16:22:53</p>
-<p class='attribute'><strong>Duration:</strong> 0:00:00.124666</p>
-<p class='attribute'><strong>Status:</strong> Pass 6 Failure 1</p>
+<p class='attribute'><strong>Start Time:</strong> 2020-12-11 18:47:45</p>
+<p class='attribute'><strong>Duration:</strong> 0:00:00.075797</p>
+<p class='attribute'><strong>Status:</strong> Pass 4 Failure 2</p>
 
 <p class='description'>用例执行情况</p>
 </div>
@@ -224,8 +224,8 @@ function showOutput(id, name) {
 <tr class='failClass'>
     <td>bases.test.TestMethod: 执行每条测试用例都要执行一遍</td>
     <td>5</td>
-    <td>4</td>
-    <td>1</td>
+    <td>3</td>
+    <td>2</td>
     <td>0</td>
     <td><a href="javascript:showClassDetail('c1',5)">Detail</a></td>
 </tr>
@@ -318,11 +318,11 @@ pt1.3:
         <pre>
         
 ft1.4: Traceback (most recent call last):
-  File "C:\Users\yangzhao\Desktop\Software\MyInterfaceTest\bases\test.py", line 85, in test_send_get
+  File "C:\Users\yangzhao\Desktop\Software\MyInterfaceTest\bases\test.py", line 88, in test_send_get
     self.assertEqual(res['errorCode'], 1002, "测试失败")
 AssertionError: 1007 != 1002 : 测试失败
 Traceback (most recent call last):
-  File "C:\Users\yangzhao\Desktop\Software\MyInterfaceTest\bases\test.py", line 85, in test_send_get
+  File "C:\Users\yangzhao\Desktop\Software\MyInterfaceTest\bases\test.py", line 88, in test_send_get
     self.assertEqual(res['errorCode'], 1002, "测试失败")
 AssertionError: 1007 != 1002 : 测试失败
 
@@ -334,22 +334,30 @@ AssertionError: 1007 != 1002 : 测试失败
     </td>
 </tr>
 
-<tr id='pt1.5' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_send_post</div></td>
+<tr id='ft1.5' class='none'>
+    <td class='failCase'><div class='testcase'>test_send_post</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.5')" >
-        pass</a>
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.5')" >
+        fail</a>
 
-    <div id='div_pt1.5' class="popup_window">
+    <div id='div_ft1.5' class="popup_window">
         <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.5').style.display = 'none' " >
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.5').style.display = 'none' " >
            [x]</a>
         </div>
         <pre>
         
-pt1.5: 
+ft1.5: Traceback (most recent call last):
+  File "C:\Users\yangzhao\Desktop\Software\MyInterfaceTest\bases\test.py", line 71, in test_send_post
+    self.assertEqual(res['errorCode'], 1007, "测试失败")
+AssertionError: 1001 != 1007 : 测试失败
+Traceback (most recent call last):
+  File "C:\Users\yangzhao\Desktop\Software\MyInterfaceTest\bases\test.py", line 71, in test_send_post
+    self.assertEqual(res['errorCode'], 1007, "测试失败")
+AssertionError: 1001 != 1007 : 测试失败
+
 
         </pre>
     </div>
@@ -360,11 +368,11 @@ pt1.5:
 
 <tr class='passClass'>
     <td>cases.test2.TestCases: 执行每条测试用例都要执行一遍</td>
-    <td>2</td>
-    <td>2</td>
+    <td>1</td>
+    <td>1</td>
     <td>0</td>
     <td>0</td>
-    <td><a href="javascript:showClassDetail('c2',2)">Detail</a></td>
+    <td><a href="javascript:showClassDetail('c2',1)">Detail</a></td>
 </tr>
 
 <tr id='pt2.1' class='hiddenRow'>
@@ -391,35 +399,11 @@ pt2.1:
     </td>
 </tr>
 
-<tr id='pt2.2' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_3</div></td>
-    <td colspan='5' align='center'>
-
-    <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt2.2')" >
-        pass</a>
-
-    <div id='div_pt2.2' class="popup_window">
-        <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_pt2.2').style.display = 'none' " >
-           [x]</a>
-        </div>
-        <pre>
-        
-pt2.2: 
-
-        </pre>
-    </div>
-    <!--css div popup end-->
-
-    </td>
-</tr>
-
 <tr id='total_row'>
     <td>Total</td>
-    <td>7</td>
     <td>6</td>
-    <td>1</td>
+    <td>4</td>
+    <td>2</td>
     <td>0</td>
     <td>&nbsp;</td>
 </tr>

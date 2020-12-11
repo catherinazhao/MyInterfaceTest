@@ -38,12 +38,14 @@ class TestCases(unittest.TestCase):
 	def tearDownClass(cls) -> None:
 		print("this is test tearDownClass")
 
+	@unittest.skip("skip this case")
 	def test_1(self):
 		print("this is first test2 test")
 
 	def test_2(self):
 		print("this is second test2 test")
 
+	@unittest.skip("skip this case")
 	def test_3(self):
 		print("this is third test2 test")
 
