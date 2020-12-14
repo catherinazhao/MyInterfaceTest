@@ -92,7 +92,7 @@ if __name__ == '__main__':
 	# runner.run(suite)
 
 	report_dir = os.path.join(PWD, 'report')
-	report_name = "TestReport_" + str(time.strftime("%Y-%m-%d_%H-%M-%S", time.localtime())) + '.html'
+	report_name = "TestReport_" + str(time.strftime("%Y-%m-%d %H-%M-%S", time.localtime())) + '.html'
 	print(report_name)
 	report_result = os.path.join(report_dir, report_name)
 	fp = open(report_result, 'wb+')
