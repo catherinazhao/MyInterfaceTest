@@ -10,6 +10,13 @@ PWD = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TEST_DATA_PATH = PWD + os.sep + 'test_datas'
 EXCEL_FILE = TEST_DATA_PATH + os.sep + 'InterfaceTestCases.xls'
 JSON_FILE = TEST_DATA_PATH + os.sep + 'RequestData.json'
+RESULT_PATH = PWD + os.sep + 'results'
+
+MAIL_HOST = 'smtp.qq.com'  # 设置服务器
+MAIL_USER = '614865872@qq.com'
+MAIL_PASSWORD = 'lnwixkqzcvbmbfcc'
+SENDER = '614865872@qq.com'
+MAIL_LISTS = 'zhaoyang2031@sina.com'
 
 
 class ConstantVal:
@@ -25,6 +32,7 @@ class ConstantVal:
 	request_data = '9'
 	expect_result = '10'
 	actual_result = '11'
+	cmp_result = '12'
 
 
 def get_id():
@@ -74,3 +82,7 @@ def get_expect_result():
 
 def get_actual_result():
 	return ConstantVal.actual_result
+
+
+def get_cmp_result():
+	return ConstantVal.cmp_result

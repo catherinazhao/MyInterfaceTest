@@ -1,12 +1,11 @@
 1. 总结整个测试架构设计
 2. 注重解耦, 能够复用
-3. 将测试结果写入excel, 并判定当前case是否成功执行
-    xtilcopy,
+3. 将测试结果写入excel, 并判定当前case是否成功执行 Done
+    xlutils.copy,
 4. 数据依赖测试case的书写   Done
    要注意完全解耦开，分成一个一个单独的方法书写
-5. 根据数据依赖的层级关系去找依赖的数据字段
-   jsonpath_rw
-6. 统计测试结果,pass和fail总计
+5. 根据数据依赖的层级关系去找依赖的数据字段(jsonpath_rw) Done
+6. 统计测试结果,pass和fail总计 Done
 7. 通过邮件的方式将测试结果发出构建发送邮件服务
 smtplib 发送邮件的服务
 email,mime.text MIMEText组织邮件格式

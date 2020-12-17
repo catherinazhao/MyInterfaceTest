@@ -4,6 +4,8 @@
 # @Time: 2020-12-14
 # @IDE: Pycharm
 # @Function: Get Depend Data
+"""jsonpath_rw库用来提取接口返回数据json指定字段数据"""
+from jsonpath_rw import parse
 
 from util.operation_xls import OperationExcel
 from util.operation_json import OperationJson
@@ -60,7 +62,13 @@ class GetDependData(object):
 		return res
 
 	"""取得依赖case的依赖字段的内容"""
-	def get_depend_data_key(self):
+	def get_depend_data_key(self, key_value):
+		depend_res = self.run_depend_case()
+		json_expr = parse(key_value)
+		match_list = [match.value for match in json_expr.find(depend_res)]
+		# print(match_list)
+		return match_list[0]
+
 
 # if __name__ == '__main__':
 

@@ -93,9 +93,18 @@ class GetData(object):
 	def get_case_actual_result(self, row):
 		return self.opera_excel.get_cell_value(row, int(get_actual_result()))
 
+	"""取得测试case的判定结果"""
+	def get_case_cmp_result(self, row):
+		return self.opera_excel.get_cell_value(row, int(get_cmp_result()))
+
 	"""取得指定列的内容"""
 	def get_case_cols_value(self, id):
 		return self.opera_excel.get_cols_value(id)
+
+
+
+
+
 
 
 if __name__ == '__main__':
