@@ -12,6 +12,7 @@ from data.depend_data import GetDependData
 from util.compare_res import CompareResult
 from data.write_data import WriteData
 from util.send_mail import SendMail
+from data.operation_cookie import OperationCookie
 
 
 class RunTest(object):
@@ -34,8 +35,6 @@ class RunTest(object):
 			method = self.test_datas.get_case_request_type(i)
 			exp_result = self.test_datas.get_case_expect_result(i)
 			depend_id = self.test_datas.get_case_is_depend(i)
-			# print(1111111111, depend_id)
-			# print(i, " ", method, url, is_run, data, cookie)
 
 			if is_run:
 				if None != depend_id:
@@ -45,8 +44,21 @@ class RunTest(object):
 					depend_datas = GetDependData(depend_id)
 					data_key = depend_datas.get_depend_data_key(depend_key)
 					data[depend_field] = data_key
-				res = mock_demo_data(self.run.run_method, data, url, method, data)
-				# res = self.run.run_method(method, url, data, cookie)
+				#res = mock_demo_data(self.run.run_method, data, url, method, data)
+
+				"""处理cookie信息"""
+				if cookie.lower() == 'write':
+					print(method, url, data)
+					res = self.run.run_method(method, url, data)
+					opera_cookie = OperationCookie(res)
+					opera_cookie.write_cookie()
+				elif cookie.lower() == 'yes':
+					opera_cookie = OperationCookie()
+					opera_cookie.get_json_cookie()
+					res = self.run.run_method(method, url, data, cookie)
+				else:
+					res = self.run.run_method(method, url, data)
+
 				cmp_res = CompareResult().cmp_data(exp_result, res)
 				if cmp_res:
 					self.write_data.write_case_actul_result(i, "PASS", res)
@@ -56,9 +68,6 @@ class RunTest(object):
 					fail_cases.append(i)
 
 		SendMail().send_mail(pass_cases, fail_cases)
-
-
-
 
 
 if __name__ == '__main__':

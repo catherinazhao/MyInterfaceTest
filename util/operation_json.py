@@ -23,7 +23,7 @@ class OperationJson(object):
 
 	"""读取json文件"""
 	def load_json(self):
-		fp = open(self.json_file, 'r')
+		fp = open(self.json_file, 'r', encoding='utf-8')
 		"""加载文件使用json load的方式"""
 		datas = json.load(fp)
 		return datas

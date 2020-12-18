@@ -10,6 +10,7 @@ PWD = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TEST_DATA_PATH = PWD + os.sep + 'test_datas'
 EXCEL_FILE = TEST_DATA_PATH + os.sep + 'InterfaceTestCases.xls'
 JSON_FILE = TEST_DATA_PATH + os.sep + 'RequestData.json'
+COOKIE_JSON_FILE = TEST_DATA_PATH + os.sep + 'Cookie.json'
 RESULT_PATH = PWD + os.sep + 'results'
 
 MAIL_HOST = 'smtp.qq.com'  # 设置服务器

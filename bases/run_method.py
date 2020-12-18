@@ -13,37 +13,39 @@ class RunMethod(object):
 	"""定义post方法"""
 	def post_method(self, url, data, cookie=None):
 		res = None
-		print(11111, url)
-		print(2222, data)
-		print(33333, cookie)
+		print(2222222, cookie)
 		if cookie:
 			"""verify=False: 表示取消安全验证"""
-			print(222222222222)
-			res = requests.post(url=url, data=data, cookies=None, verify=False)
+			res = requests.post(url, data=data, cookies=cookie)
 		else:
-			print(1111111111111111111)
-			res = requests.post(url=url, data=data, verify=False)
+			res = requests.post(url, data=data)
 
 		status_code = res.status_code
-		# print(status_code, res.text)
+		"""cookie只能通过responses.get()方法获取"""
+		#print(11111111111111111, res.cookies)
 		return res.json()
 
 	"""定义get方法"""
-	def get_method(self, url, data, cookie=None):
+	def get_method(self, url, data=None, cookie=None):
 		res = None
+		"""
+		注：不能写成requests.get(url=url, data=data, cookies=cookie)的形式。
+		因为默认方法中没有写默认的key值,所以不能自己添加
+		"""
 		if cookie:
-			res = requests.get(url=url, data=data, cookies=None, verify=False)
+			res = requests.get(url, data, None)
 		else:
-			res = requests.get(url=url, data=data, verify=False)
+			res = requests.get(url, data)
 		return res.json()
 
 	"""判定使用post还是get方法"""
 	def run_method(self, method, url, data=None, cookie=None):
 		res = None
-		print(method, url, data, cookie)
 		if method.lower() == 'post':
 			res = self.post_method(url, data, cookie)
 		else:
 			res = self.get_method(url, data, cookie)
 
 		return json.dumps(res, ensure_ascii=False, indent=2, sort_keys=True)
+		# return res
+

@@ -1,6 +1,6 @@
 {"user1":{"uid":"0","service_id":"1","os":"Android","secrectd_code":"ffffffff-b423-2a1e-ffff-ffffcbeed19a","osv":"4.4.4","chan_id":"10102001","screen_size":"768*1366","password":"cluZgkasMLF2LZPexIJMbw==","timestamp":"1507260001708","plat_id":"2","v_id":"5.1.2","token":"50609fd5ffd05c734195d4bbc8dd5092","email":"hQMVwpqKhWbGx5nOcz1fdA==","brand":"ZUK ZUK Z2121","app_id":"1","uuid":""},
-"user":{"username":"18513199586","password":"111111","verify":"", "referer":"http://m.imooc.com"},
-"szlist":{"timestamp":"1507272377898","uid":"5249191","uuid":"5ae7d1a22c82fb89c78f603420870ad7","secrect":"7d33829ecc354f0b4e00fb3764cb4207","marking":"androidbanner","type":"1","token":"50609fd5ffd05c734195d4bbc8dd5092"},
+"user":{"username":"13358696021","password":"xn365tian","verify":"", "referer":"http://m.imooc.com"},
+"szlist":{"uid":"9538303","uuid":"a050c81e-238c-459b-b70a-07d2511568b1","secrect":"7d33829ecc354f0b4e00fb3764cb4207","marking":"androidbanner","type":"1","token":"50609fd5ffd05c734195d4bbc8dd5092"},
 "coureinfo":{"timestamp":"1507272626988","uid":"5249191","secrect":"7d33829ecc354f0b4e00fb3764cb4207","token":"530157426cc3c609257ce2c2ca8a16a5","plan_id":"20"},
 "buycourse":{"timestamp":"1507273116527","uid":"5249191","secrect":"7d33829ecc354f0b4e00fb3764cb4207","token":"4598e3d0d245f17c61042dec57a62ea5","type_ids":[{"type":4,"type_id":20}]},
 "sureorder":{"timestamp":"1507273596359","uid":"5249191","goods_ids":"144","secrect":"7d33829ecc354f0b4e00fb3764cb4207","token":"5bada48c765943725cd9494f7fa997ae","coupon_id":"0"},
@@ -15,5 +15,9 @@
 "buy":{"timestamp":"1507989375749","uid":"5249191","secrect":"694697627cbd7fc65f9d0f82f4fe9849","from":"2","token":"f7d58a0db8381086dc10864b24badb7f","pay_way":"1"},
 "shop":{"timestamp":"1507977102508","uid":"5249191","secrect":"34fc61cc4904ed061fcf78cb9803c758","token":"4f99f77c55a54ee98dd2d60bc463c041","type_ids":[{"type":4,"type_id":21}]},
 "order_list":{"goods_ids":[{"goods_id":"346","type":"1","type_id":"131","status":"1","price":"388.00","ios_price":"388.00","service_lifetime":0,"open_discount":"0","discount_start_time":"1503936000","discount_end_time":"1503936000","discount_price":"0.00","discount_type":"0","code_white_list":10001,"using_discount":"false","pay_price":"388.00","code":0},{"goods_id":"362","type":"1","type_id":"136","status":"1","price":"366.00","ios_price":"366.00","service_lifetime":90,"open_discount":"0","discount_start_time":"1505232000","discount_end_time":"1505232000","discount_price":"0.00","discount_type":"0","code_white_list":10001,"using_discount":"false","pay_price":"366.00","code":0}]},
-"htts_data":{"uid":"5249191"}
+"htts_data":{"uid":"5249191"},
+"37w_get":{"query":"今天天气怎么样","appkey":"3A3B230A65CC502F40770E0986A5E666","address":"中国,北京市,北京市,海淀区,丹棱街,19号,39.98471105359984,116.32149246520405","output":"lite","version":40000,"user_id":"test","ignore_context":"true","source":"debug"},
+"37w_post":{}
 }
+
+

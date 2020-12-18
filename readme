@@ -9,3 +9,21 @@
 7. 通过邮件的方式将测试结果发出构建发送邮件服务
 smtplib 发送邮件的服务
 email,mime.text MIMEText组织邮件格式
+
+
+
+明天的任务：
+一.
+1. cookie方法的编码
+2. 在json文件中保存cookie并读取cookie内容；或者直接使用cookie, 不写入文件
+3. 测试case中三种依赖关系，cookie的书写
+二、mysql python
+将测试数据预期结果存储在数据库中，可以进行批量操作
+1、创建数据库
+2、读取数据
+数据库使用方法：1. 连接数据库 ， 2.创建游标 ， 3查询数据
+3、取得mysql数据库的字段名称：mysqldb.cursors （字典类型数据）
+在connect连接数据库的时候设置curclass = mysqldb.cursors.DictCursor
+4、将预期结果同实际返回数据进行对比(可以将预期结果sql语句写入在excle中，直接读取sql语句)
+operator ,python3
+cmp python2
